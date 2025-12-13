@@ -1,0 +1,19 @@
+# QEMU source directory
+qemu-source/
+
+# Build directories
+build/
+*.o
+*.a
+*.so
+*.dylib
+
+# Build outputs
+qemu-system-*
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store

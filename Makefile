@@ -50,8 +50,17 @@ build-lto:
 	cd qemu-source && ninja -C build
 
 clean:
-	cd qemu-source && make clean 2>/dev/null || true
-	cd qemu-source && rm -rf build 2>/dev/null || true
+	@if [ -d "qemu-source" ]; then \
+		cd qemu-source && make clean 2>/dev/null || echo "No Makefile to clean"; \
+		rm -rf qemu-source/build; \
+	else \
+		echo "No qemu-source directory found"; \
+	fi
 
 distclean:
-	rm -rf qemu-source
+	@if [ -d "qemu-source" ]; then \
+		rm -rf qemu-source; \
+		echo "Removed qemu-source directory"; \
+	else \
+		echo "No qemu-source directory found"; \
+	fi

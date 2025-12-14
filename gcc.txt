@@ -1,0 +1,31 @@
+Binutils, ld, objcopy, objdump, readelf:
+../binutils-X/configure \
+  --target=aarch64-elf \
+  --prefix=$PREFIX \
+  --disable-nls \
+  --disable-werror \
+  --disable-multilib \
+  --disable-shared
+
+Use only:
+	•	-ffreestanding
+	•	-nostdlib
+	•	-fno-stack-protector
+	•	-mcmodel=large
+GCC, aarch64-elf-gcc,cc1, collect2, minimal, libgcc.a:
+../gcc-X/configure \
+  --target=aarch64-elf \
+  --prefix=$PREFIX \
+  --enable-languages=c \
+  --without-headers \
+  --disable-shared \
+  --disable-nls \
+  --disable-multilib \
+  --disable-libssp \
+  --disable-libquadmath \
+  --disable-libsanitizer \
+  --disable-threads \
+  --disable-libgomp \
+  --disable-libatomic
+
+

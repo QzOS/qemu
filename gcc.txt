@@ -1,3 +1,6 @@
+--target=aarch64-qzos
+
+
 Binutils, ld, objcopy, objdump, readelf:
 ../binutils-X/configure \
   --target=aarch64-elf \

@@ -11,25 +11,22 @@ fi
 
 ./configure \
   --target-list=aarch64-softmmu \
-  --disable-tools \
-  --disable-docs \
-  --disable-plugins \
-  --disable-slirp \
-  --disable-vnc \
+  --disable-user \
   --disable-gtk \
   --disable-sdl \
+  --disable-vnc \
+  --disable-spice \
   --disable-opengl \
   --disable-curses \
-  --disable-spice \
+  --disable-audio \
   --disable-usb \
   --disable-libusb \
-  --disable-audio \
-  --disable-nettle \
-  --disable-gcrypt \
-  --disable-capstone \
-  --disable-libssh \
-  --disable-libxml2 \
   --disable-brlapi \
   --disable-vte \
-  --disable-qom-cast-debug \
-  --disable-debug-info
+  --disable-docs \
+  --disable-plugins \
+  --disable-libxml2 \
+  --disable-libssh \
+  --disable-slirp \
+  --enable-debug \
+  --enable-gdb
